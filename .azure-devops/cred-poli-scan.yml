@@ -7,7 +7,9 @@ trigger: none
 
 # pull request validation
 pr:
-- main
+branches:
+  include:
+  - main
 
 pool:
   vmImage: windows-latest
