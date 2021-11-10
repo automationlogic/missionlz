@@ -1075,17 +1075,29 @@
 							"visible": true
 						},
 						{
+							"name": "locationsApi",
+							"type": "Microsoft.Solutions.ArmApiControl",
+							"request": {
+								"method": "GET",
+								"path": "locations?api-version=2019-11-01"
+							}
+						},
+						{
 							"name": "logAnalyticsWorkspaceLocation",
-							"type": "Microsoft.Common.TextBox",
 							"label": "Log Analytics Workspace Location",
-							"defaultValue": "East US",
-							"toolTip": "",
+							"type": "Microsoft.Common.DropDown",
+							"visible": true,
+							"defaultValue": "",
+							"toolTip": "Log Analytics Workspace Location",
+							"multiselect": false,
+							"selectAll": false,
+							"filter": true,
+							"filterPlaceholder": "Filter items ...",
+							"multiLine": true,
 							"constraints": {
-								"required": false,
-								"regex": "",
-								"validationMessage": ""
-							},
-							"visible": true
+								"allowedValues": "[map(filter(steps('basics').deploymentDetails.locationsApi.value,(item) => contains(split('southafricanorth,southeastasia,japaneast,canadacentral,northeurope,westeurope,francecentral,germanywestcentral,uksouth,centralus,eastus,eastus2,southcentralus,westus2', ','), item.name)),(item) => parse(concat('{\"label\":\"', item.regionalDisplayName, '\",\"value\":\"', item.name, '\"}')))]",
+								"required": true
+							}
 						},
 						{
 							"name": "logAnalyticsWorkspaceCappingDailyQuotaGb",
