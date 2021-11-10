@@ -1078,7 +1078,7 @@
 							"name": "logAnalyticsWorkspaceLocation",
 							"type": "Microsoft.Common.TextBox",
 							"label": "Log Analytics Workspace Location",
-							"defaultValue": "[[parameters('sharedServicesLocation')]",
+							"defaultValue": "East US",
 							"toolTip": "",
 							"constraints": {
 								"required": false,
