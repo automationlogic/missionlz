@@ -863,12 +863,12 @@
 				},
 				{
 					"name": "sharedSettings",
-					"label": "Shared Settings",
+					"label": "Shared Services Settings",
 					"subLabel": {
 						"preValidation": "Configure shared settings",
 						"postValidation": "Done"
 					},
-					"bladeTitle": "General Settings",
+					"bladeTitle": "Shared Services Settings",
 					"elements": [{
 							"name": "sharedServicesSubscriptionId",
 							"type": "Microsoft.Common.SubscriptionSelector",
@@ -1095,7 +1095,7 @@
 							"filterPlaceholder": "Filter items ...",
 							"multiLine": true,
 							"constraints": {
-								"allowedValues": "[map(filter(steps('basics').deploymentDetails.locationsApi.value,(item) => contains(split('southafricanorth,southeastasia,japaneast,canadacentral,northeurope,westeurope,francecentral,germanywestcentral,uksouth,centralus,eastus,eastus2,southcentralus,westus2', ','), item.name)),(item) => parse(concat('{\"label\":\"', item.regionalDisplayName, '\",\"value\":\"', item.name, '\"}')))]",
+								"allowedValues": "[map(filter(steps('logSettings').locationsApi.value,(item) => contains(split('eastus,eastus2,southcentralus,westus,westus2', ','), item.name)),(item) => parse(concat('{\"label\":\"', item.regionalDisplayName, '\",\"value\":\"', item.name, '\"}')))]",
 								"required": true
 							}
 						},
