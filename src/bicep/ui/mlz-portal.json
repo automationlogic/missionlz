@@ -1095,7 +1095,7 @@
 							"filterPlaceholder": "Filter items ...",
 							"multiLine": true,
 							"constraints": {
-								"allowedValues": "[map(filter(steps('logSettings').locationsApi.value,(item) => contains(split('eastus,eastus2,southcentralus,westus,westus2', ','), item.name)),(item) => parse(concat('{\"label\":\"', item.regionalDisplayName, '\",\"value\":\"', item.name, '\"}')))]",
+								"allowedValues": "[map(filter(steps('logSettings').locationsApi.value,(item) => contains(split('eastus,eastus2,southcentralus,westus,westus2,usgovvirginia,usgovarizona', ','), item.name)),(item) => parse(concat('{\"label\":\"', item.regionalDisplayName, '\",\"value\":\"', item.name, '\"}')))]",
 								"required": true
 							}
 						},
