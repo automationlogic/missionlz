@@ -1,5 +1,7 @@
 # Mission LZ Bicep
 
+[![Deploy To Azure](../../docs/images/deploytoazure.svg?sanitize=true)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fmissionlz%2Fglenn%2FforceArrayForForm%2Fsrc%2Fbicep%2Fmlz.json)
+
 ## Deployment
 
 ### Prerequisistes
