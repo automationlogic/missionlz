@@ -530,7 +530,7 @@
     },
     "logStorageSkuName": {
       "type": "string",
-      "defaultValue": "Standard_GRS",
+      "defaultValue": "Standard_LRS",
       "metadata": {
         "description": "The Storage Account SKU to use for log storage. It defaults to \"Standard_GRS\". See https://docs.microsoft.com/en-us/rest/api/storagerp/srp_sku_types for valid settings."
       }
